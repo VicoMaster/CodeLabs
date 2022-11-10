@@ -188,3 +188,17 @@ body {
         justify-content: center;
     }
 }
+
+@media (max-width: 360px) {
+    .buscarvel-main__controles-button {
+        width: 83%;
+    }
+
+    .buscarvel-main__controles-input {
+        width: 85%;
+    }
+
+    .buscarvel-results {
+        padding: 0;
+    }
+}

@@ -92,3 +92,8 @@
         height: 100%;
     }
 }
+@media (max-width: 360px) {
+    .buscarvel-results__card {
+        width: 34rem;
+    }
+}

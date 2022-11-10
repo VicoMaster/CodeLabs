@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>CodeLabs | Buscarvel</title>
+</head>
+
+<body>
+    <header class="buscarvel-header">
+        <h1 class="buscarvel-header__logo" id="buscarvelLogo">BUSCARVEL</h1>
+        <p class="buscarvel-header__subtitle">Busque a su H&eacute;roe</p>
+    </header>
+    <main class="buscarvel-main">
+        <section class="buscarvel-main__controles">
+            <label class="buscarvel-main__controles-label" for="buscarvelInput">Nombre del Objetivo:</label>
+            <input class="buscarvel-main__controles-input" type="text" id="buscarvelInput"
+                placeholder="Escriba el nombre o indicios">
+            <button class="buscarvel-main__controles-button" id="buscarvelBuscar" type="button">BUSCAR</button>
+            <span class="buscarvel-main__message" id="buscarvelMessage"></span>
+        </section>
+    </main>
+    <section class="buscarvel-results visually-hidden" id="buscarvelResults">
+        <!-- INSERT CARDS WITH JS [component: card.js]-->
+    </section>
+    <footer class="buscarvel-footer position-botton" id="buscarvelFooter">
+        <span class="buscarvel-footer__span">BUSCARVEL - 2022</span>
+        <p class="buscarvel-footer__p">Diseño por Andr&eacute;sR.Dev</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/libraries/blueimp-md5/js/md5.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

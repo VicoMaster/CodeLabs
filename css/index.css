@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Iceberg&display=swap');
+@import url(card.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Fuentes */
+    --font-logo: 'Iceberg', cursive;
+    --font-titles: 'Impact', fantasy;
+    --font-text: 'Heebo', sans-serif;
+    /* Colores */
+    --color-verde-hacker: #222F35;
+    --color-verde-hacker-95: rgba(34, 47, 53, .95);
+    --color-verde-hacker-claro: #39505A;
+    --color-verde-hacker-oscuro: #182126;
+    --color-verde-hacker-oscuro-60: rgba(24, 33, 38, .6);
+    --color-white: #fff;
+    /* Sombras */
+    --shadow-profundidad: inset 8px 7px 5px rgba(24, 33, 38, 0.6), inset -7px -8px 5px #39505A;
+    --shadow-neumorphism: 2px 7px 5px rgba(24, 33, 38, 0.6), -3px 0px 5px #39505A;
+    --shadow-neumorphism-pressed: -1px 3px 5px rgba(24, 33, 38, 0.6), -2px 0px 5px #39505A;
+    --shadow-neumorphism-img: -2px 2px 5px rgba(24, 33, 38, 0.8), -3px 0px 5px #39505A;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--color-verde-hacker);
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.buscarvel-header {
+    align-items: center;
+    background-color: var(--color-verde-hacker-95);
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    justify-content: center;
+    left: 0;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.buscarvel-header__logo {
+    color: var(--color-white);
+    font-family: var(--font-logo);
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.buscarvel-header__subtitle {
+    color: var(--color-white);
+    font-family: var(--font-text);
+    font-size: 2rem;
+}
+
+/* MAIN */
+.buscarvel-main {
+    height: 100%;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.buscarvel-main__controles {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.buscarvel-main__controles-label {
+    color: var(--color-white);
+    font-family: var(--font-titles);
+    font-size: 3rem;
+}
+
+.buscarvel-main__controles-input {
+    background-color: var(--color-verde-hacker-claro);
+    border-radius: 1.5rem;
+    border: .3rem solid var(--color-verde-hacker-oscuro);
+    color: var(--color-white);
+    font-size: 2rem;
+    height: 8rem;
+    text-align: center;
+    width: 36rem;
+    box-shadow: var(--shadow-profundidad);
+}
+
+.buscarvel-main__controles-button {
+    background-color: var(--color-verde-hacker-oscuro);
+    border-radius: 1.5rem;
+    border: .3rem solid var(--color-verde-hacker-oscuro);
+    box-shadow: var(--shadow-neumorphism);
+    color: var(--color-white);
+    cursor: pointer;
+    font-family: var(--font-text);
+    font-size: 2rem;
+    font-weight: bolder;
+    height: 8rem;
+    text-align: center;
+    width: 36rem;
+}
+
+@media (hover: hover) {
+    .buscarvel-main__controles-button:hover {
+        box-shadow: var(--shadow-neumorphism-pressed);
+        text-decoration: underline;
+    }
+}
+
+.buscarvel-main__message {
+    color: var(--color-white);
+    font-family: var(--font-text);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* SECTION RESULTADOS */
+.buscarvel-results {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 3rem;
+}
+
+/* FOOTER */
+.buscarvel-footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.buscarvel-footer__span {
+    color: var(--color-white);
+    font-family: var(--font-titles);
+    font-size: 3rem;
+}
+
+.buscarvel-footer__p {
+    color: var(--color-white);
+    font-family: var(--font-text);
+    font-size: 2rem;
+}
+
+/* UTILIDADES */
+.visually-hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+.position-botton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 1020px) {
+    .buscarvel-results {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
